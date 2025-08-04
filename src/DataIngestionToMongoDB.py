@@ -51,11 +51,13 @@ except FileNotFoundError:
 
 
 # MongoDB connection details
-hostname = "jy73wr.h.filess.io"
-database = "olistdatanosqldbda_recallflag"
-port = "27018"
-username = "olistdatanosqldbda_recallflag"
-password = "4c8e12e7ea20a6a1be6823bc1bad11bf5719079d"
+# removed my credentials for safety purpouse 
+
+hostname = ""
+database = ""
+port = ""
+username = ""
+password = ""
 
 # Build the MongoDB connection URI
 uri = f"mongodb://{username}:{password}@{hostname}:{port}/{database}"

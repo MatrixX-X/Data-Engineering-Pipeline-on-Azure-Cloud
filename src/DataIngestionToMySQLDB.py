@@ -49,11 +49,13 @@ import pandas as pd
 import mysql.connector
 
 # Connection details
-hostname = "tv-2sh.h.filess.io"
-database = "olistprojectdbda_universeif"
-port = "3307"
-username = "olistprojectdbda_universeif"
-password = "fecd6ea475db55f10715cb41ce334101ff76d313"
+# removed my credentials for safety purpouse 
+
+hostname = ""
+database = ""
+port = ""
+username = ""
+password = ""
 
 # CSV file path
 csv_file_path = "olist_order_payments_dataset.csv"
