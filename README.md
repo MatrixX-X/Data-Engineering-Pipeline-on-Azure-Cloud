@@ -13,14 +13,20 @@ To build a scalable, end-to-end data pipeline on Microsoft Azure using modern da
 
 ### 🔧 **Architecture Overview**
 
+![Overall Pipeline Architecture](img/overall_pipeline_architecture.png)
+
 The pipeline is designed following the medallion architecture (Bronze → Silver → Gold). Below are the primary components:
 
-#### 1. **Data Sources**
+#### 1. **Data Sources and Data Linkk**
+
+![ADLS Bronze Silver Gold](img/adls_bronze_silver_gold.png)
 
 * External data from **Kaggle**, **GitHub**, **MySQL**, and **MongoDB**.
-* Data extracted using **Azure Data Factory (ADF)**.
+* Data extracted using **Azure Data Factory (ADF) to Azure Data Lake**.
 
 #### 2. **Ingestion Layer (Bronze)**
+
+![ADF Pipeline Ingestion](img/adf_pipeline_ingestion.png)
 
 * **Azure Data Factory (ADF)** pipelines ingest raw data from:
 
@@ -30,6 +36,8 @@ The pipeline is designed following the medallion architecture (Bronze → Silver
 * Ingested data is stored in **Azure Data Lake Storage Gen2 (ADLS Gen2)** in the **Bronze layer**.
 
 #### 3. **Transformation Layer (Silver)**
+
+![Databricks Transformation](img/databricks_transformation.png)
 
 * **Azure Databricks (PySpark)** is used for:
 
@@ -97,4 +105,35 @@ The pipeline is designed following the medallion architecture (Bronze → Silver
 ├── /docs/                      # Architecture diagrams/screenshots
 ├── README.md                   # Project summary and instructions
 ```
+
+
+# Data Engineering Pipeline on Azure Cloud
+
+## 🚀 Objective
+To build a scalable, end-to-end data pipeline on Microsoft Azure using modern data engineering tools. The pipeline facilitates ingestion, transformation, storage, and analytics of data for business intelligence and reporting.
+
+---
+
+## 🏗️ Architecture Overview
+
+### Overall Architecture
+
+
+
+---
+
+
+
+
+---
+
+### 4. Serving Layer: Azure Synapse Analytics
+
+- External tables created on Gold layer
+- Connected to BI tools like Power BI or Tableau
+
+![Synapse External Tables](docs/images/synapse_external_tables.png)
+
+
+
 
